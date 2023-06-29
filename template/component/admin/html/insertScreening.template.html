@@ -1,0 +1,23 @@
+<div class="session-popup" id="insert-screening">
+    <h2>Inserisci nuova proiezione</h2>
+    <form method="post" name="insert-screening">
+        <label for="title">Titolo</label>
+        <select name="title" id="title" required>
+            <TITLE/>
+        </select>
+        <label for="theater">Sala</label>
+        <select name="theater" id="theater" required>
+            <option value="" selected disabled hidden>Sala</option>
+            <option value="1">Sala 1</option>
+            <option value="2">Sala 2</option>
+        </select>
+        <label for="date">Data</label>
+        <input type="date" name="date" id="date" required></input>
+        <label for="time">Orario</label>
+        <input type="time" name="time" id="time" required></input>
+        
+        <INSERTMESSAGE/>
+
+        <input type="submit" name="insert-submit" value="Inserisci proiezione" class="confirm-button"/>
+    </form>
+</div>

@@ -1,0 +1,1500 @@
+* {
+    padding: 0em;
+    margin: 0em;
+}
+
+:root {
+    --bgcolor: black;
+    --txtcolor: white;
+    --maincolor: #163f77;
+    --headercolor: #333333;
+    --titlescolor: white;
+    --titlesbgcolor: #0d1117;
+    --contentxtcolor: white;
+    --contentbgcolor: rgb(31, 31, 31);
+    --graybg: #454d5f;
+
+    --todaybgcolor: #313131;
+    
+    --linkcolor: #BDD5FF;
+    --linkvisitedcolor: #E6CDF4;
+    --linkhovercolor: #d4d4d4;
+    --linkmoviecolor: rgb(4, 107, 192);
+    
+    --popupbgcolor: #161b22;
+    --popupinputcolor: #0d1117;
+    
+    --confirmcolor: #053771;
+    --dangercolor: #a50d0d;
+    --denycolor: #454d5f;
+
+    --border: 1px solid #0f1318;
+
+    --grayshadow: 0px 0px 15px rgb(65, 65, 65);
+    --blackshadow: 0px 0px 15px black;
+    --popupshadow: 0px 0px 70px black;
+}
+
+html,
+body {
+    font-size: 100%;
+    font-family: "Verdana", sans-serif;
+    line-height: 1.5em;
+    background-color: var(--bgcolor);
+    color: var(--txtcolor);
+    margin: auto;
+}
+
+body {
+    color: var(--contentxtcolor);
+    border: var(--border);
+    background-color: var(--bgcolor);
+    border-style: solid;
+    border-width: 0.15em;
+}
+
+body a {
+    color: var(--linkcolor);
+}
+
+body a:visited {
+    color: var(--linkvisitedcolor);
+}
+
+body a:visited:hover, body a:hover {
+    color: var(--linkhovercolor);
+}
+
+
+header {
+    background-color: var(--headercolor);
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+header h1 {
+    background-image: url('../images/cinema.svg');
+    background-size: 15%;
+    background-position: left;
+    background-repeat: no-repeat;
+
+    text-indent: 1.1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: 1.5em;
+
+    overflow: hidden;
+}
+
+header h1 a, header h1 a:visited {
+    color: var(--txtcolor);
+    text-decoration: none;
+}
+
+header h2 {
+    color: var(--titlescolor);
+}
+
+#hamburger {
+    display: none;
+}
+
+.topnav {
+    overflow: hidden;
+}
+
+.topnav ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.topnav li {
+    float: left;
+}
+
+.topnav li a {
+    display: block;
+    color: var(--linkcolor);
+    text-align: center;
+    padding: 1em;
+}
+
+.topnav li a:visited:hover, .topnav li a:hover {
+    background-color: var(--linkhovercolor);
+    color: black;
+}
+
+.topnav li a:visited {
+    color: var(--linkvisitedcolor);
+}
+
+#currentlink {
+    display: block;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    color: var(--txtcolor);
+    background-color: #414141;
+}
+
+#admin-topnav {
+    background-color: var(--graybg);
+}
+
+#breadcrumb {
+    background-color: var(--maincolor);
+    color: var(--txtcolor);
+    font-size: 1.1em;
+    padding: 0.5em 0em 0.5em 1.0em;
+    border: var(--border);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#breadcrumb li {
+    display: inline;
+}
+
+#breadcrumb li:not(:last-child)::after {
+    content: " ⇒ ";
+}
+
+#breadcrumb a {
+    color: var(--linkcolor);
+}
+
+#breadcrumb a:visited:hover, #breadcrumb a:hover {
+    color: var(--linkhovercolor);
+}
+
+#breadcrumb a:visited {
+    color: var(--linkvisitedcolor);
+}
+
+.skipToContent {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.skipToContent:focus {
+    background-color: black;
+    border: 5px solid blue;
+    position: fixed;
+    top: 1em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: fit-content;
+    width: fit-content;
+    clip: auto;
+}
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 99;
+    background-color: var(--maincolor);
+    color: var(--txtcolor);
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 20px;
+    font-size: larger;
+    box-shadow: var(--blackshadow);
+}
+
+#backToTop:visited {
+    color: var(--txtcolor);
+}
+
+#backToTopNoJs {
+    display: block;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    z-index: 99;
+    background-color: var(--maincolor);
+    color: var(--txtcolor);
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 20px;
+    font-size: larger;
+    box-shadow: var(--blackshadow);
+}
+
+#backToTopNoJs:visited {
+    color: var(--txtcolor);
+}
+
+main {
+    background-color: var(--contentbgcolor);
+    padding: 3em;
+    padding-top: 1em;
+    padding-bottom: 4em;
+}
+
+main h1 {
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
+
+main>h2 {
+    text-align: center;
+}
+
+#index-logo {
+    height: 8em;
+    width: 70%;
+    text-indent: -9999px;
+    padding: 0em;
+    background-image: url('../images/cinema_motto.svg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-bottom: 2em;
+}
+
+#trending, #movie-list {
+    list-style: none;
+    margin: auto;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+}
+
+#movie-list img {
+    height: 18em;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--blackshadow);
+    object-fit: cover;
+}
+
+#movie-search {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    width: 25%;
+    gap: 0.5em;
+}
+
+#movie-search input {
+    color: var(--txtcolor);
+    background-color: var(--popupinputcolor);
+    font-size: 1em;
+    text-indent: 1em;
+    border: 1px solid var(--graybg);
+    border-radius: 10px;
+    height: 3.2em;
+    width: 100%;
+}
+
+#movie-search input[type="submit"] {
+    padding-left: 1em;
+    padding-right: 1em;
+    text-indent: 0em;
+    width: 100%;
+    color: var(--txtcolor);
+    background-color: var(--confirmcolor);
+    text-align: center;
+    cursor: pointer;
+}
+
+#movie-search input:hover {
+    box-shadow: var(--grayshadow);
+}
+
+#searchNoJs {
+    display: flex;
+    gap: 0.5em;
+    width: 100%;
+}
+
+
+
+.movie-container {
+    height: auto;
+    width: 30em;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.movie-image {
+    height: 18em;
+    border-radius: 10px;
+    box-shadow: var(--blackshadow);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    overflow: hidden;
+}
+
+.movie-text {
+    vertical-align: text-top;
+    overflow: hidden;
+    padding-left: 1em;
+    padding-right: 1em;
+    
+}
+
+.movie-text h3, #movie-list h2 {
+    padding-top: 0.5em;
+    font-size: 1.5em;
+    word-wrap: break-word;
+}
+
+.movie-text a:link {
+    color: var(--linkmoviecolor);
+}
+
+.movie-text a:visited:hover, .movie-text a:hover {
+    color: var(--linkhovercolor);
+}
+
+.movie-text a:visited {
+    color: var(--linkvisitedcolor);
+}
+
+
+.movie-text p {
+    padding-top: 1em;
+}
+
+.info {
+    padding-top: 0.2em;
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+.info dd {
+    display: inline;
+}
+
+.info dd abbr {
+    text-decoration: none;
+}
+
+.info dd:not(:last-child)::after {
+    content: " •";
+}
+
+#movie-list .info {
+    padding-top: 1em;
+}
+
+#movie-list .info dt {
+    font-size: medium;
+    line-height: 1em;
+}
+
+#movie-list .info dd {
+    display: block;
+    font-weight: bold;
+    padding-bottom: 0.5em;
+}
+
+#movie-list .info dd::after {
+    content: "";
+}
+
+#today {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    gap: 5em;
+}
+
+#today h2 {
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+.box {
+    background-color: var(--todaybgcolor);
+    border-radius: 10px;
+    padding: 2em;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.box:hover {
+    box-shadow: var(--grayshadow);
+}
+
+#promo .box-content, #prices .box-content {
+    max-width: 18em;
+}
+
+#prices dt {
+    font-weight: bold;
+    line-height: 1em;
+}
+
+#prices dd {
+    padding-bottom: 0.5em;
+}
+
+.box-image {
+    width: 10em;
+    height: 10em;
+    background-size: 10em;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; 
+}
+
+#movies .box-image {
+    background-image: url('../images/icons/calendar_today.svg');
+}
+
+#promo .box-image {
+    background-image: url('../images/icons/redeem_today.svg');
+}
+
+#prices .box-image {
+    background-image: url('../images/icons/prices_today.svg');
+}
+
+#movies .box-image p {
+    padding-top: 5.5em;
+    color: rgb(212, 134, 134);
+    text-shadow: 0 0 15px black;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: normal;
+    text-align: center;
+}
+
+.box-content ul {
+    list-style-type: none;
+}
+
+.box-content #no-screenings  {
+    font-size: 1em;
+}
+
+.orari {
+    padding-bottom: 0.5em;
+}
+
+.orari h3, .orari ul, .orari li {
+    display: inline;
+}
+
+.orari h3 {
+    margin-right: 1em;
+}
+
+.orari h3 a:link {
+    color: var(--linkcolor);
+}
+
+.orari h3 a:visited:hover, h3 .orari a:hover {
+    color: var(--linkhovercolor);
+}
+
+.orari h3 a:visited {
+    color: var(--linkvisitedcolor);
+}
+
+.orari li {
+    margin-left: 1em;
+}
+
+.orari li:not(:last-child)::after {
+    content: ",";
+}
+
+#intro {
+    margin: 1em 1em 4em 1em;
+    display: flex;
+    gap: 2%;
+}
+
+#intro img {
+    object-fit: cover;
+    object-position: center;
+    min-width: 30%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: var(--blackshadow);
+}
+
+#intro #content {
+    min-width: 33%;
+}
+
+#intro #content p {
+    margin: 1em 0em 1em 0em;
+}
+
+#tech {
+    margin: auto;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+}
+
+#tech div {
+    width: 30em;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+#tech div h3 {
+    color: black;
+    width: 100%;
+    height: 0em;
+    padding-top: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: var(--grayshadow);
+    background-color: white;
+    border-radius: 50%;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+}
+
+#atmos {
+    background-image: url("../images/icons/atmos.png");
+}
+
+#vision {
+    background-image: url("../images/icons/vision.png");
+}
+
+#surround {
+    background-image: url("../images/icons/surround.png");
+}
+
+#tech div p {
+    vertical-align: text-top;
+    overflow: hidden;
+    padding-left: 1em;
+    padding-right: 1em;
+    
+}
+
+.session-popup {
+    box-shadow: var(--popupshadow);
+    margin: 5em auto;
+    width: 25em;
+    padding: 3em;
+    border-radius: 45px;
+    background: var(--popupbgcolor);
+}
+
+.session-popup h1, .session-popup h2 {
+    color: var(--titlescolor);
+    margin-top: 0em;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    font-weight: normal;
+    text-align: center;
+}
+
+.session-popup label {
+    color: var(--txtcolor);
+    font-size: 1em;
+}
+
+.session-popup input {
+    color: var(--txtcolor);
+    background-color: var(--popupinputcolor);
+    font-size: 1em;
+    border: var(--border);
+    border-radius: 10px;
+    height: 3.2em;
+    width: 100%;
+}
+
+.session-popup input:not([type="submit"]){
+    text-indent: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 1.5em;
+}
+
+.session-popup input:focus {
+    border-color: white;
+    outline: none;
+}
+
+.session-popup input:hover {
+    box-shadow: var(--grayshadow);
+}
+
+.session-popup .confirm-button {
+    color: var(--txtcolor);
+    background-color: var(--confirmcolor);
+    text-align: center;
+    cursor: pointer;
+}
+
+.session-popup .danger-button {
+    background: var(--dangercolor);
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.session-popup .deny-button {
+    background-color: var(--denycolor);
+    text-align: center;
+    cursor: pointer;
+}
+
+.error, .session-popup .error {
+    color: #F48E8A;
+    text-align: center;
+}
+
+.success, .session-popup .success {
+    color: rgb(0, 200, 0);
+    text-align: center;
+}
+
+
+#auth-popup .confirm-button {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+#auth-popup .change-auth {
+    color: rgb(184, 184, 184);
+    text-align: center;
+}
+
+#auth-popup .requirements {
+    color: rgb(184, 184, 184);
+    margin-left: 1em;
+    margin-bottom: 1.5em;
+}
+
+#auth-popup .requirements li {
+    text-align: left;
+}
+
+#auth-popup .requirements li::after {
+    content: attr(check);
+}
+
+#delete-popup p {
+    margin-top: 1.5em;
+}
+
+#delete-popup form p {
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+#delete-popup .danger-button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#delete-popup #deleted-message {
+    color: var(--contentxtcolor);
+    font-size: x-large;
+    text-align: center;
+}
+
+#delete-popup #deleted-message+p {
+    color: rgb(184, 184, 184);
+    text-align: center;
+}
+
+#book-popup {
+    padding-top: 0;
+}
+
+#book-popup h2 {
+    padding-top: 2em;
+    margin-bottom: 0em;
+}
+
+#book-popup ul {
+    padding-top: 2em;
+    margin-bottom: 1em;
+}
+
+#book-popup p {
+    color: rgb(184, 184, 184);
+}
+
+#book-popup p>strong {
+    color: white;
+}
+
+#book-popup label {
+    display: inline-block;
+    margin-top: 2em;
+}
+
+#book-popup input {
+    margin: 0;
+}
+
+#book-popup .confirm-button, #book-popup .danger-button {
+    margin-top: 2em;
+}
+
+#book-popup #booking-code-label {
+    margin-top: 2em;
+    color: var(--contentxtcolor);
+}
+
+#book-popup #booking-code {
+    font-family: "Verdana", monospace;
+    color: var(--contenttxtcolor);
+    text-align: center;
+    line-height: normal;
+    font-size: 5em;
+}
+
+#printable h1 {
+    display: none;
+}
+
+#calendar-popup {
+    margin: 0 auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#date-selector-label {
+    text-align: center;
+}
+
+#date-selector {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+#date-selector input {
+    color: var(--txtcolor);
+    background-color: var(--graybg);
+    font-size: 1em;
+    border: var(--border);
+    border-radius: 10px;
+    height: 3.2em;
+    width: 35em;
+}
+
+#date-selector a {
+    background-color: var(--maincolor);
+    font-size: 1em;
+    border: var(--border);
+    border-radius: 10px;
+    line-height: 3.2em;
+    overflow: hidden;
+    width: 6em;
+}
+
+#date-selector input:focus {
+    border-color: white;
+    outline: none;
+}
+
+#date-selector input:hover {
+    box-shadow: var(--grayshadow);
+}
+
+footer {
+    line-height: 1.8em;
+    color: var(--txtcolor);
+    background-color: var(--maincolor);
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    padding: 3em;
+    row-gap: 0.5em;
+    column-gap: 0.5em;
+    border: var(--border);
+}
+
+footer div {
+    min-width: 25em;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+footer h1, footer h2 {
+    font-size: larger;
+    content:' ';
+    display:block;
+    border-bottom: 0.05em solid black;
+    margin: 0.4em;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 0.5em;
+}
+ 
+footer address {
+    font-style: normal;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+#footer-logo {
+    width: 100%;
+    height: 10em;
+    padding: 0em;
+    background-image: url('../images/cinema_motto.svg');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#footer-logo h1, #footer-logo p {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-bottom: none;
+}
+
+.hide {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.dashboard>h1, .dashboard>h2 {
+    width: 75%;
+    background-color: var(--titlesbgcolor);
+    font-size: xx-large;
+    padding: 1.5em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: auto;
+    margin-top: 1.5em;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+    text-align: center;
+}
+
+.dashboard #prenotazioni {
+    width: 75%;
+    background-color: var(--popupbgcolor);
+    padding: 3em;
+    margin: auto;
+    margin-bottom: 2em;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 1em;
+    box-shadow: var(--popupshadow);
+}
+
+.dashboard #prenotazioni h2, #option-logout h2 {
+    color: var(--titlescolor);
+    font-size: 2em;
+    width: 100%;
+    margin-top: 0.5em;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 1.5em;
+}
+
+.dashboard #prenotazioni>dl {
+    background-color: var(--titlesbgcolor);
+    border: var(--border);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1em;
+    border-radius: 45px;
+}
+
+.dashboard #prenotazioni>dl>div {
+    flex: auto;
+    margin-left: 3em;
+    margin-right: 3em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 1em;
+}
+
+.dashboard #prenotazioni #title dd {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.dashboard #prenotazioni .booking-info:not(#title) dd {
+    display: inline;
+}
+
+.dashboard #prenotazioni .booking-info dd::after {
+    display: block;
+    content: "";
+}
+
+.dashboard #prenotazioni .booking-info dt {
+    display: inline;
+}
+
+.dashboard #prenotazioni #booking-code {
+    font-family: "Verdana", monospace;
+    background-color: var(--graybg);
+    font-size: xx-large;
+    padding: 1.2em;
+    border-radius: 45px;
+}
+
+#profile-settings {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-top: 0em;
+}
+
+#profile-settings, #option-logout {
+    width: 75%;
+    margin-bottom: 0em;
+}
+
+#profile-settings h3 {
+    color: var(--titlescolor);
+    margin-bottom: 1.5em;
+    font-size: 2em;
+    font-weight: normal;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+#profile-settings p:not(.error) {
+    font-size: 0.9em;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 1em;
+}
+
+#profile-settings #success {
+    color: rgb(0, 200, 0);
+}
+
+#profile-settings form {
+    padding-bottom: 3em;
+    border-bottom: 1px white solid;
+}
+
+#profile-settings .confirm-button {
+    margin-top: 1.5em;
+}
+
+#profile-settings a, #option-logout a {
+    color: var(--txtcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: var(--border);
+    border-radius: 10px;
+    height: 3.2em;
+    text-decoration: none;
+}
+
+#profile-settings a:hover, #option-logout a:hover {
+    box-shadow: var(--grayshadow);
+}
+
+#profile-settings a:visited, #option-logout a:visited {
+    color: var(--txtcolor);
+}
+
+#screenings-film-container {
+    margin-top: 4em;
+}
+
+.screenings-film {
+    display:flex;
+    margin-bottom: 1em;
+}
+
+.screenings-film img {
+    border: var(--border);
+    border-right: none;
+    width: 20em;
+    max-width: 30%;
+    height: fit-content;
+    z-index: 1;
+    border-radius: 10px;
+    box-shadow: var(--blackshadow);
+}
+
+.screenings-film div {
+    background-color: var(--popupbgcolor);
+    border: var(--border);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: -21em;
+    padding-left: 21em;
+    
+}
+
+.screenings-film h2 {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-left: 1em;
+}
+
+.screenings-film h2 a:link {
+    color: var(--linkmoviecolor);
+}
+
+.screenings-film h2 a:visited:hover, .screenings-film h2 a:hover {
+    color: var(--linkhovercolor);
+}
+
+.screenings-film h2 a:visited {
+    color: var(--linkvisitedcolor);
+}
+
+.screenings-film dl {
+    padding-left: 2em;
+    background-color: var(--graybg);
+}
+
+.screenings-film ul {
+    background-color:var(--titlesbgcolor);
+    border-bottom-right-radius: 10px;
+    padding: 1em;
+    flex: auto;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.screenings-film ul li {
+    background-color: var(--maincolor);
+    border: var(--border);
+    border-radius: 20px;
+    width: 11em;
+    padding: 1.5em;
+    height: fit-content;
+    text-align: center;
+}
+
+#no-screenings {
+    background-color: var(--popupbgcolor);
+    border: var(--border);
+    font-size: 2em;
+    padding: 1em;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#movie-info {
+    background-color: var(--titlesbgcolor);
+    border: var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: auto;
+    border-radius: 45px; 
+}
+
+#movie-info h1 {
+    background-color: var(--popupbgcolor);
+    text-align: center;
+    font-size: xx-large;
+    width: 100%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    margin-bottom: 0em;
+    margin-top: 0em;
+    border-top-left-radius: 45px;
+    border-top-right-radius: 45px;
+}
+
+#movie-info img {
+    border: var(--border); 
+    width: 20em;   
+    max-width: 40%;
+    height: fit-content;
+    border-bottom-left-radius: 45px;
+}
+
+#movie-info dl {
+    width: 50%;
+}
+
+#movie-info dt {
+    font-size: 1.2em;
+    font-weight: bold;
+    float: left;
+    clear: left;
+    margin: 1em;
+    margin-right: 0em;
+}
+
+#movie-info dd {
+    font-size: 1.2em;
+    float: left;
+    margin: 1em;
+}
+
+#movie-time h2 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#movie-time h3 {
+    background-color: var(--popupbgcolor);
+    border: var(--border);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: x-large;
+    margin-top: 1em;
+    text-indent: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#movie-time ul {
+    background-color: var(--titlesbgcolor);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 1em;
+    flex: auto;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+#movie-time ul li {
+    background-color: var(--maincolor);
+    border: var(--border);
+    border-radius: 20px;
+    width: 11em;
+    padding: 1.5em;
+    text-align: center;
+    height: fit-content;
+}
+
+#insert-movie, #edit-movie, #messages {
+    width: 75%;
+}
+
+#admin-dashboard h1 {
+    border-radius: 45px;
+}
+
+#admin-dashboard textarea, #admin-dashboard select {
+    color: var(--txtcolor);
+    background-color: var(--popupinputcolor);
+    font-size: 1em;
+    border: var(--border);
+    border-radius: 10px;
+    min-height: 3.2em;
+    width: 100%;
+    text-indent: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 1.5em;
+    resize: vertical;
+}
+
+#admin-dashboard textarea:focus, #admin-dashboard textarea:focus{
+    border-color: white;
+    outline: none;
+}
+
+#admin-dashboard textarea:hover, #admin-dashboard textarea:hover {
+    box-shadow: var(--grayshadow);
+}
+
+#admin-dashboard form{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4%;
+}
+
+#admin-dashboard form .form-column {
+    flex: 46%;
+    min-width: 20em;
+}
+
+#admin-dashboard #message {
+    margin: auto;
+    margin-bottom: 1em;
+}
+
+#admin-dashboard div {
+    margin: 2.5em auto;
+}
+
+#edit-movie #edit-submit {
+    margin-bottom: 2em;
+}
+
+#delete-bookings #delete-today {
+    margin-bottom: 2em;
+}
+
+#messages {
+    overflow-wrap: break-word;
+}
+
+#messages h2 {
+    margin-bottom: 0em;
+}
+
+#messages h3 {
+    margin-top: 1em
+}
+
+#messages .danger-button {
+    margin-top: 2em;
+}
+
+#page-contatti{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding-bottom: 1em;
+}
+
+#page-contatti h1 {
+    min-width: 100%;
+}
+
+#page-contatti h2 {
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    text-align: center;
+    min-width: 90%;
+    block-size: fit-content;
+}
+
+#page-contatti h2:after {
+    content: '';
+    display: block;
+    position: relative;
+    border: 0.08em #454d5f solid;
+    margin-top: 1em;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+}
+
+#contatti-maps{
+    background-color: var(--popupbgcolor);
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 1em;
+    min-width: 49%;
+    block-size: fit-content;
+    border-radius: 20px;
+}
+
+#contatti-maps div{
+    padding: 1em;
+    text-align: center;
+    margin: auto;
+}
+
+#contatti-maps #embed-maps iframe {
+    width: 40em;
+    max-width: 100%;
+    height: 25em;
+    border: 0;
+    border-radius: 20px;
+}
+
+#contatti-maps div:not(#embed-maps){
+    content: '';
+    display: block;
+    position: relative;
+    padding-top: 0em;
+    border-bottom: 0.06em #454d5f solid;
+    margin-top: 1em;
+    margin-left: 17.5%;
+    margin-right: 17.5%;
+}
+
+#contatti-form{
+    background-color: var(--popupbgcolor);
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 49%;
+    block-size: fit-content;
+    border-radius: 20px;
+}
+
+#contatti-form form{
+    padding: 1em;
+    width: 80%;
+    margin: auto;
+    margin-top: 0em;
+    display: flex;
+    flex-direction: column;
+    block-size: fit-content;
+    border-radius: 20px;
+}
+
+#contatti-form form input{
+    color: white;
+    background-color: var(--popupinputcolor);
+    border: var(--border);
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 15px;
+    margin-bottom: 0.5em;
+    height: 1em;
+}
+
+#contatti-form form textarea{
+    color: white;
+    background-color: var(--popupinputcolor);
+    border: var(--border);
+    padding: 1em;
+    font-size: 1em;
+    font-family: inherit;
+    border-radius: 15px;
+    margin-bottom: 0.5em;
+    height: 10em;
+    resize: vertical;
+    min-height: 10em;
+    overflow: hidden;
+}
+
+#contatti-form form input:focus, #contatti-form form textarea:focus{
+    border-color: white;
+    outline: none;
+}
+
+#contatti-form form input:hover, #contatti-form form textarea:hover{
+    box-shadow: var(--grayshadow);
+}
+
+#contatti-form form .contatti-form-button{
+    background-color: var(--confirmcolor);
+    padding: 1em;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    margin-top: 0.5em;
+    height: 3em;
+    cursor: pointer;
+}
+
+#contatti-form #error {
+    margin: 1em auto 1em auto;
+    color: #F48E8A;
+    text-align: center;
+}
+
+#contatti-form #success {
+    margin: 1em auto 1em auto;
+    color: rgb(0, 200, 0);
+    text-align: center;
+}
+
+.err {
+    background: url("../images/schermo_sala.jpg") no-repeat center fixed ;
+    background-size: cover;
+    background-attachment: local;
+    position: relative;
+    background-color: var(--txtcolor);
+}
+
+#err {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 3em;
+    margin-bottom: 9.5em;
+    color: var(--contentbgcolor); 
+    width: 80%;
+}
+
+#err h1 {
+    font-size: 3em;
+    margin-bottom: 0em;
+    padding-top: 0.5em;
+    padding-bottom: 0.3em;
+}
+
+#err p {
+    text-align: center;
+    margin: 1em;
+    margin-top: 0em;
+    margin-bottom: 2em;
+}
+
+#err h1+p {
+    font-size: 0.6em;
+}
+
+#err q {
+    font-style: italic;
+}
+
+#err a {
+    font-size: 0.8em;
+    background-color: var(--maincolor);
+    color: var(--txtcolor);
+    cursor: pointer;
+    padding: 1em;
+    border-radius: 20px;
+    box-shadow: var(--blackshadow);
+}
+
+#err a:hover {
+    color: var(--linkhovercolor);
+}

@@ -1,0 +1,12 @@
+<div class="session-popup" id="auth-popup">
+    <h1><span lang="en">Login</span></h1>
+    <form method="post" name="login" onsubmit="return formValidation('login')">
+        <label for="username"><span lang="en">Username</span></label>
+        <input type="text" name="username" id="username" placeholder="Username" minlength="1" maxlength="50" required/>
+        <label for="password"><span lang="en">Password</span></label>
+        <input type="password" name="password" id="password" placeholder="Password" required/>
+        <ERROR/>
+        <input type="submit" value="Accedi" name="submit" class="confirm-button"/>
+    </form>
+    <p class="change-auth">Non possiedi un account? <a href="registration.php">Registrati</a></p>
+</div>

@@ -1,0 +1,29 @@
+<div class="session-popup" id="auth-popup">
+    <h1>Registrazione</h1>
+    <form method="post" name="registration" onsubmit="return formValidation('registration')">
+        <label for="username"><span lang="en">Username</span></label>
+        <input type="text" name="username" id="username" placeholder="Username" minlength="4" maxlength="50" onkeyup="userValidation()" required/>
+        <div class="requirements">
+            <p>Il nome utente deve:</p>
+            <ul>
+                <li>Avere almeno 4 caratteri (tra lettere e numeri);</li>
+                <li>Non superare i 50 caratteri;</li>
+                <li>Non contenere caratteri speciali (escluso "_").</li>
+            </ul>
+        </div>
+        <label for="password"><span lang="en">Password</span></label>
+        <input type="password" name="password" id="password" placeholder="Password" minlength="4" onkeyup="pswValidation()" required/>
+        <div class="requirements">
+            <p>La password deve:</p>
+            <ul>
+                <li>Avere almeno 4 caratteri (tra numeri e lettere);</li>
+                <li>Non contenere caratteri speciali che non siano i seguenti "!@#$%^&*".</li>
+            </ul>
+        </div>
+        <label for="repeat">Ripeti <span lang="en">Password</span></label>
+        <input type="password" name="repeat" id="repeat" placeholder="Ripeti Password" required/>
+        <p class="error"><ERROR/><p>
+        <input type="submit" value="Registrati" name="submit" class="confirm-button"/>
+    </form>
+    <p class="change-auth">Hai già un account? <a href="login.php">Accedi</a></p>
+</div>

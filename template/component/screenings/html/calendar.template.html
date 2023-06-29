@@ -1,0 +1,13 @@
+<form method="get">
+    <div id="date-selector-label">
+        <label for="picker">Seleziona una data</label>
+    </div>
+    <div id="date-selector">
+        <a href="screenings.php?date=<valDataPrevious/>"><valDataPreviousFormatted/></a>
+        <input type="hidden" value="<valDataValue/>" name="date"/>
+        <input type="submit" value="<valData/>" name="picker" id="picker" aria-label="Apri il calendario per selezionare una data"/>
+        <a href="screenings.php?date=<valDataNext/>"><valDataNextFormatted/></a>
+    </div>
+</form>
+
+<PICKER/>

@@ -1,0 +1,149 @@
+@import url(style.css);
+
+#dashboard #prenotazioni {
+    width: 100%;
+    padding: 0em;
+}
+
+header h1 {
+    font-size: 1.5em;
+}
+
+.topnav {
+    display: none;
+    width: 100%;
+}
+
+.topnav li {
+    float: none;
+}
+
+.topnav li a {
+    display: block;
+    color: var(--linkcolor);
+    text-align: left;
+    padding: 1em;
+    padding-left: 2em;
+}
+
+#admin-topnav {
+    display: block;
+}
+
+#hamburger {
+    display: block;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 0.5em;
+}
+
+button#hamburger {
+    background-image: url(../images/icons/hamburger.svg);
+    background-position: center;
+    border: none;
+    background-color: transparent;
+}
+
+#currentlink {
+    display: block;
+    text-align: left;
+    padding: 1em;
+    padding-left: 2em;
+    text-decoration: none;
+    color: var(--txtcolor);
+    background-color: #414141;
+}
+
+main {
+    padding: 0em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+#movie-time h2 {
+    margin-left: 1em;
+}
+
+#trending, #movie-list {
+    padding: 1em;
+}
+
+#today {
+    margin: 1em;
+    margin-bottom: 3em;
+}
+
+.movie-image, #movie-list img {
+    height: 12em;
+    max-width: 8em;
+}
+
+#intro {
+    flex-wrap: wrap;
+}
+
+.session-popup, #insert-movie, #edit-movie, #messages {
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: 0em;
+    margin-right: 0em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#admin-dashboard form .form-column {
+    min-width: auto;
+    flex: 100%;
+}
+
+
+.dashboard {
+    padding: auto;
+    width: 100%;
+}
+
+.dashboard h1, .dashboard h2 {
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+.dashboard #prenotazioni {
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+#profile-settings, #option-logout, #movie-info, #movie-info dl, #movie-search {
+    width: 100%;
+}
+
+#admin-dashboard h1 {
+    margin: auto;
+}
+
+#date-selector a {
+    width: 60%;
+}
+
+#movie-info img {
+    margin: auto;
+    border-radius: 10px;
+}
+
+.screenings-film ul li, #movie-time ul li {
+    width: 5em;
+}
+
+footer div {
+    min-width: 10em;
+    word-break: break-all;
+}
+
+#footer-logo{
+    height: 4em;
+}

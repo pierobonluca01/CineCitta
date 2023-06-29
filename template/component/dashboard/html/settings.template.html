@@ -1,0 +1,28 @@
+<h2>Gestione utente</h2>
+
+<div class="session-popup" id="profile-settings">
+    <h3>Cambia <span lang="en"> username</span></h3>
+    <form method="post" name="change-username" onsubmit="return formValidation('change-username')">
+        <label for="username">Cambia <span lang="en">username</span></label>
+        <input type="text" name="username" id="username" placeholder="Username" minlength="1" maxlength="50" required/>
+        <ERRORUSERNAME/>
+        <input type="submit" name="submit-username" value="Aggiorna username" class="confirm-button"/>
+    </form>
+
+    <h3>Cambia <span lang="en">Password</span></h3>
+    <form method="post" name="change-password" onsubmit="return formValidation('change-password')">
+        <label for="old-password">Vecchia <span lang="en">password</span></label>
+        <input type="password" name="old-password" id="old-password" placeholder="Vecchia password" required="required" autocomplete="off"/>
+        <label for="new-password">Nuova <span lang="en">password</span></label>
+        <input type="password" name="new-password" id="new-password" placeholder="Nuova password" required="required" autocomplete="off"/>
+        <label for="repeat">Conferma la nuova <span lang="en">password</span></label>
+        <input type="password" name="repeat" id="repeat" placeholder="Ripeti password" required="required" autocomplete="off"/>
+        <ERRORPASSWORD/>
+        <input type="submit" name="submit-password" value="Aggiorna password" class="confirm-button"/>
+    </form>
+
+    <h3>Elimina <span lang="en">account</span></h3>
+    <a class="danger-button" href="delete.php">Elimina&nbsp;<span lang="en">account</span></a>
+    <p><span lang="en">Account</span> creato il <time datetime="<valDate/>"><valAccountDate/> alle ore <valAccountTime/></time>.</p>
+
+</div>

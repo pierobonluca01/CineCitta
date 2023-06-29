@@ -1,0 +1,19 @@
+<div id="contatti-form">
+    <h2>Mandaci un messaggio</h2>
+    <form method="post" name="contatti" onsubmit="return formValidation()">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" minlength="1" maxlength="50" placeholder="Nome" required="required"/>
+        <label for="cognome">Cognome</label>
+        <input type="text" name="cognome" id="cognome" minlength="1" maxlength="50" placeholder="Cognome" required="required"/>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" minlength="1" maxlength="100" placeholder="Email" required="required"/>
+        <label for="subject">Oggetto</label>
+        <input type="text" name="subject" id="subject" minlength="1" maxlength="100" placeholder="Oggetto" required="required"/>
+        <label for="messaggio">Messaggio</label>
+        <textarea name="messaggio" id="messaggio" cols="30" rows="10" minlength="1" maxlength="2000" placeholder="Messaggio" required="required"></textarea>
+
+        <MESSAGE/>
+
+        <input type="submit" name="submit" id="submit" value="Invia" class="contatti-form-button"/>
+    </form>
+</div>

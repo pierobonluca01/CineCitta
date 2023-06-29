@@ -1,0 +1,29 @@
+<div class="session-popup" id="edit-movie">
+    <h2>Modifica un film</h2>
+    <p>Una volta scelto il film, è possibile modificare anche singole informazioni, senza la necessità di compilare tutti i campi.</p>
+    <form method="post" name="edit-movie" enctype="multipart/form-data" onsubmit="return formValidation('edit-movie')">
+        <div class="form-column">
+            <label for="edit-title">Titolo</label>
+            <select name="edit-title" id="edit-title" required>
+                <TITLE/>
+            </select>
+            <label for="edit-synopsis">Sinossi</label>
+            <textarea rows="5" cols="40" name="edit-synopsis" id="edit-synopsis" minlength="1" maxlength="500" placeholder="Sinossi"></textarea>
+        </div>
+        <div class="form-column">
+            <label for="edit-release-date">Data di rilascio</label>
+            <input type="date" name="edit-release-date" id="edit-release-date"></input>
+            <label for="edit-duration">Durata</label>
+            <input type="number" name="edit-duration" id="edit-duration" min="0" max="999" placeholder="Durata"/>
+            <label for="edit-countries">Paesi di produzione</label>
+            <input type="text" name="edit-countries" id="edit-countries" minlength="1" maxlength="100" placeholder="Paesi di produzione"/>
+            <label for="edit-cover">Locandina</label>
+            <input type="file" name="edit-cover" id="edit-cover" accept=".jpg"/>
+        </div>
+        
+        <EDITMESSAGE/>
+
+        <input type="submit" id="edit-submit" name="edit-submit" value="Aggiorna film" class="confirm-button"/>
+        <input type="submit" name="delete" value="Elimina film" class="danger-button"/>
+    </form>
+</div>

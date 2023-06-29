@@ -1,0 +1,15 @@
+<div class="session-popup" id="messages">
+    <h2>Oggetto: <valSubject/></h2>
+    <h3>Testo</h3>
+    <p><valContent/></p>
+    <h3>Mittente</h3>
+    <p>Inviato da <valName/> <valSurname/> (<a href="mailto:<valMail/>"><valMail/></a>) il giorno <time datetime="<valDate/>"><valFormattedDate/></time> alle ore <time><valTime/></time>.</p>
+    
+
+    <form method="post" name="delete-message">
+        <input type="hidden" name="id" value="<valId/>"/>
+        <input type="submit" name="delete-message" value="Elimina messaggio" class="danger-button"/>
+    </form>
+</div>
+
+<MESSAGE/>

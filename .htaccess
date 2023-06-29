@@ -1,0 +1,21 @@
+ErrorDocument 404 /CineCitta/404.php
+ErrorDocument 500 /CineCitta/500.php
+ErrorDocument 501 /CineCitta/500.php
+ErrorDocument 502 /CineCitta/500.php
+ErrorDocument 503 /CineCitta/500.php
+ErrorDocument 504 /CineCitta/500.php
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+    
+    ExpiresDefault "access plus 2 days"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType text/javascript "access 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/ico "access plus 1 month"
+
+    ExpiresByType text/html "access 5 minutes"
+</IfModule>

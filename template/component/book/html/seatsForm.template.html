@@ -1,0 +1,20 @@
+<form method="post" name="book-form">
+    <h2>Prenota posti</h2>
+    
+    <input type="hidden" name="username" value="<valUsername/>"/>
+    <input type="hidden" name="title" value="<valTitle/>"/>
+    <input type="hidden" name="date" value="<valDate/>"/>
+    <input type="hidden" name="time" value="<valTime/>"/>
+    <input type="hidden" name="theater" value="<valTheater/>"/>
+
+    <label for="ordinary">Posti ordinari</label>
+    <p>Disponibilità: <valPostiOrdinari/> posti</p>
+    <input type="number" name="ordinary" id="ordinary" min="<valOrdinaryMin/>" max="<valOrdinaryMax/>" value="<valOrdinaryMin/>" required/>
+    <p>Per prenotazioni superiori alle 10 persone, <a href="contacts.php">contattaci</a>.</p>
+
+    <label for="reserved">Posti riservati ai non abili</label>
+    <p>Disponibilità: <valPostiRiservati/> posti</p>
+    <input type="number" name="reserved" id="reserved" min="<valReservedMin/>" max="<valReservedMax/>" value="<valReservedMin/>" required/>
+    
+    <input type="submit" value="Conferma prenotazione" name="submit" class="confirm-button"/>
+</form>

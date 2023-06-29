@@ -1,0 +1,109 @@
+@import url(style.css);
+
+:root {
+    --bgcolor: white;
+    --txtcolor: black;
+    --maincolor: white;
+    --headercolor: white;
+    --titlescolor: black;
+    --titlesbgcolor: white;
+    --contentxtcolor: black;
+    --contentbgcolor: white;
+    --graybg: white;
+
+    --todaybgcolor: white;
+
+    --linkcolor: black;
+    --linkvisitedcolor: black;
+    --linkhovercolor: black;
+    --linkmoviecolor: black;
+    
+    --popupbgcolor: white;
+    --popupinputcolor: white;
+
+    --confirmcolor: white;
+    --dangercolor: white;
+    --denycolor: white;
+
+    --border: 1px solid #0f1318;
+
+    --grayshadow: 0px 0px 0px;
+    --blackshadow: 0px 0px 0px;
+    --popupshadow: 0px 0px 0px;
+}
+
+.noprint {
+    display: none !important;
+}
+
+html,
+body {
+    font-size: 100%;
+    font-family: "Verdana", serif;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    padding-bottom: 0em;
+}
+
+header h1 {
+    text-indent: 0em;
+}
+
+header h1, #footer-logo {
+    background-image: none;
+}
+
+#breadcrumb {
+    border: none;
+    padding-left: 0em;
+}
+
+.topnav {
+    display: none;
+}
+
+#intro img, .skipToContent, .box-image, #date-selector a, #contatti-form, #footer-logo, #index-logo, #movie-search {
+    display: none;
+}
+
+#no-screenings, .screenings-film div {
+    background-color: var(--bgcolor);
+}
+
+#auth-popup p:not(.error), .dashboard>h1, .dashboard>h2, #admin-dashboard h1, #admin-dashboard h2 {
+    color: var(--txtcolor);
+}
+
+#book-popup {
+    border: 5px dotted black;
+}
+
+#book-popup h1+h2 {
+    padding-top: 0em;
+}
+
+#book-popup h1 {
+    padding-top: 1em;
+    margin-bottom: 2em;
+    display: block;
+}
+
+
+footer, #contatti-maps {
+    border: none;
+}
+
+footer {
+    padding-top: 0em;
+}
+
+footer div {
+    min-width: 10em;
+    word-break: break-all;
+}

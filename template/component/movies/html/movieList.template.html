@@ -1,0 +1,16 @@
+<h1>Film in sala</h1>
+
+<form method="get" id="movie-search">
+    <label for="movie-search-bar">Cerca un film</label>
+    <div id="searchNoJs">
+        <input type="text" name="movie-search-bar" id="movie-search-bar" onkeyup="search()" placeholder="Cerca un film" required/>
+        <noscript>
+            <input type="submit" name="sumbit" value="Cerca"/>
+        </noscript>
+    </div>
+    <RICERCA/>
+</form>
+
+<ul id="movie-list">
+    <MOVIEITEM/>
+</ul>
